@@ -11,7 +11,7 @@ import static org.lwjgl.glfw.GLFW.*;
 @Mixin(Window.class)
 public class WindowMixin {
     @Inject(at = @At(value = "INVOKE", target = "Lorg/lwjgl/glfw/GLFW;glfwCreateWindow(IILjava/lang/CharSequence;JJ)J", shift = At.Shift.BEFORE), method = "<init>", remap = false)
-    private void doNotSetInputFocus(CallbackInfo ci) {
+    private void setWindowHints(CallbackInfo ci) {
         glfwWindowHint(GLFW_FOCUSED, GLFW_FALSE);
         // todo: find a way to create custom decorations? maybe in minecraft style?
         glfwWindowHint(GLFW_DECORATED, GLFW_FALSE);

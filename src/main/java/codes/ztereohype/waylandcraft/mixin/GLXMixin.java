@@ -16,10 +16,9 @@ import static org.lwjgl.glfw.GLFW.GLFW_PLATFORM_WAYLAND;
 @Mixin(GLX.class)
 public class GLXMixin {
 	@Inject(at = @At(value = "INVOKE", target = "Lorg/lwjgl/glfw/GLFW;glfwSetErrorCallback(Lorg/lwjgl/glfw/GLFWErrorCallbackI;)Lorg/lwjgl/glfw/GLFWErrorCallback;", shift = At.Shift.AFTER), method = "_initGlfw()Ljava/util/function/LongSupplier;", remap = false)
-	private static void init(CallbackInfoReturnable<LongSupplier> cir) {
+	private static void setWayland(CallbackInfoReturnable<LongSupplier> cir) {
 		LoggerFactory.getLogger("waylandcraft").info("Applying wayland...");
 
 		GLFW.glfwInitHint(GLFW_PLATFORM, GLFW_PLATFORM_WAYLAND);
-		GLFW.glfwWindowHint(GLFW.GLFW_DECORATED, GLFW.GLFW_FALSE);
 	}
 }
