@@ -42,7 +42,7 @@ dependencies {
 	// devenv mods
 	modRuntimeOnly "maven.modrinth:lazydfu:${project.lazydfu_version}"
 	modRuntimeOnly "maven.modrinth:starlight:${project.starlight_version}"
-	modRuntimeOnly "maven.modrinth:lithium:${project.lithium_version}"
+//	modRuntimeOnly "maven.modrinth:lithium:${project.lithium_version}"
 	modRuntimeOnly("com.terraformersmc:modmenu:${project.modmenu_version}") {
 		transitive = false
 	}
