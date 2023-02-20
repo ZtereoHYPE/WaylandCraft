@@ -11,3 +11,5 @@ I mostly made it for personal reasons and does what I need it to, which is why m
 - funny behaviour when moving the game across monitors with different aspect ratios
 - No game icon
 - "game icon" on gnome Dash flashes frequently
+- full-screens on wrong screen
+- "Gl error the platform does not support setting window position" occasionally happens.
