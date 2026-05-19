@@ -1,5 +1,7 @@
 # WaylandCraft
 
+# this is not the wayland compositor from the youtube video :P
+
 This is a (very) little mod that I use to run minecraft in Wayland compositors/DEs.
 
 I mostly made it for personal reasons and does what I need it to, which is why most TODOs in the code aren't solved.
